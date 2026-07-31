@@ -1,0 +1,4 @@
+Name: KEMI
+Role: developer
+Status: inactive
+Skills: Python,Github actions

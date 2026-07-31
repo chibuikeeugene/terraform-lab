@@ -1,0 +1,4 @@
+Name: ADE
+Role: student
+Status: active
+Skills: Terraform,docker

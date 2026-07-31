@@ -1,0 +1,4 @@
+Name: FUNKE
+Role: tester
+Status: active
+Skills: Testing,Linux
