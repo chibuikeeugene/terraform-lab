@@ -4,6 +4,12 @@ variable "team-members" {
   default     = ["Ade", "Kemi", "Funke"]
 }
 
+variable "create-summary" {
+  description = "whether the summary file should be created"
+  type        = bool
+  default     = true
+}
+
 variable "users" {
   description = "users and their configuration"
   type = map(object({
@@ -28,6 +34,11 @@ variable "users" {
       role   = "tester"
       active = true
       skills = ["Testing", "Linux"]
+    }
+    Eugene = {
+      role   = "cloud engineer"
+      active = true
+      skills = ["AWS", "Terraform", "Kubernetes", "Github actions"]
     }
   }
 

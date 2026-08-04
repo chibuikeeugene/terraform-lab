@@ -18,11 +18,17 @@ resource "local_file" "team-members" {
 resource "local_file" "users" {
   for_each = var.users
 
-  filename =  "${path.module}/${each.key}.txt"
-  content = <<-EOT
+  filename = "${path.module}/${each.key}.txt"
+  content  = <<-EOT
   Name: ${upper(each.key)}
   Role: ${each.value.role}
   Status: ${each.value.active ? "active" : "inactive"}
   Skills: ${join(",", each.value.skills)}
   EOT
+}
+
+resource "local_file" "summary" {
+  count    = var.create-summary ? 1 : 0
+  filename = "${path.module}/summary.txt"
+  content  = "Configured Users: ${join(", ", keys(var.users))}"
 }

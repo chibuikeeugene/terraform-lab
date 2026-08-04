@@ -1,0 +1,4 @@
+Name: EUGENE
+Role: cloud engineer
+Status: active
+Skills: AWS,Terraform,Kubernetes,Github actions
