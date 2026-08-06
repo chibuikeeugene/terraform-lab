@@ -1,0 +1,18 @@
+digraph G {
+  rankdir = "RL";
+  node [shape = rect, fontname = "sans-serif"];
+  "data.local_file.source_policy" [label="data.local_file.source_policy"];
+  "local_file.application" [label="local_file.application"];
+  "local_file.audit" [label="local_file.audit"];
+  "local_file.completion" [label="local_file.completion"];
+  "local_file.environment_summary" [label="local_file.environment_summary"];
+  "local_file.report" [label="local_file.report"];
+  "terraform_data.external_setting" [label="terraform_data.external_setting"];
+  "terraform_data.protected_record" [label="terraform_data.protected_record"];
+  "terraform_data.release_marker" [label="terraform_data.release_marker"];
+  "local_file.audit" -> "local_file.application";
+  "local_file.completion" -> "local_file.environment_summary";
+  "local_file.environment_summary" -> "local_file.report";
+  "local_file.report" -> "data.local_file.source_policy";
+  "local_file.report" -> "local_file.application";
+}

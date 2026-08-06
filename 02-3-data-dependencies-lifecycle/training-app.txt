@@ -1,0 +1,3 @@
+Application: training-app
+Environment: dev
+Release: 2
