@@ -1,0 +1,3 @@
+Name: Eugene
+Role: Cloud and platform engineer
+Skills: terraform,AWS,Kubernetes
