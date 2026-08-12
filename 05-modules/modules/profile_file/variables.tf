@@ -23,3 +23,14 @@ variable "output_directory" {
   description = "Directory in which the profile is created"
   type        = string
 }
+
+variable "environment" {
+  description = "The environment assigned to each profile user"
+  type        = string
+  validation {
+    condition = contains(
+      ["Development", "Staging", "Production"], var.environment
+    )
+    error_message = "Environment must be either staging, development or production"
+  }
+}
