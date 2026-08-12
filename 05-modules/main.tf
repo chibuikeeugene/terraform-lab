@@ -9,5 +9,6 @@ module "user_profile" {
   name             = each.key
   role             = each.value.role
   skills           = each.value.skills
+  environment      = each.value.environment
   output_directory = path.module
 }

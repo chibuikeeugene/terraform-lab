@@ -4,5 +4,6 @@ resource "local_file" "profile" {
   Name: ${title(var.name)}
   Role: ${var.role}
   Skills: ${length(var.skills) > 0 ? join(",", var.skills) : "None"}
+  Environment: ${var.environment}
   EOT
 }
