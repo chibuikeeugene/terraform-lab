@@ -34,11 +34,17 @@ variable "vpc_cidr" {
 variable "public_subnets" {
   description = "Public subnets to create"
   type = map(object({
-    cidr       = string
+    cidr              = string
     availability_zone = string
   }))
   validation {
     condition     = length(var.public_subnets) >= 2
     error_message = "At least two public subnets must be supplied"
   }
+}
+
+variable "create_staging_network" {
+  description = "whether a stsging network should be created"
+  type        = bool
+  default     = false
 }
