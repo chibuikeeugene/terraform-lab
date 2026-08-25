@@ -14,7 +14,7 @@ variable "project_name" {
 variable "environment" {
   description = "The deployment environment"
   type        = string
-  default     = "dev"
+  default     = "staging"
   validation {
     condition     = contains(["dev", "prod", "staging"], var.environment)
     error_message = "The environment variable must either be dev, prod or staging"
@@ -24,7 +24,7 @@ variable "environment" {
 variable "vpc_cidr" {
   description = "The IPv4 CIDR value for our vpc"
   type        = string
-  default     = "10.20.0.0/16"
+  default     = "10.10.0.0/16"
   validation {
     condition     = can(cidrnetmask(var.vpc_cidr))
     error_message = "vpc_cidr must be a valide IPv4 CIDR"

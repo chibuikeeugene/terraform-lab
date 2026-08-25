@@ -3,7 +3,7 @@ data "aws_caller_identity" "current" {
 }
 
 module "network" {
-  source = "./modules/network"
+  source = "../../modules/network"
 
   name_prefix    = "${var.project_name}-${var.environment}"
   vpc_cidr       = var.vpc_cidr
@@ -16,7 +16,7 @@ module "network" {
 
 module "staging_network" {
   count          = var.create_staging_network ? 1 : 0
-  source         = "./modules/network"
+  source         = "../../modules/network"
   name_prefix    = "${var.project_name}-staging"
   vpc_cidr       = var.vpc_cidr
   public_subnets = var.public_subnets
