@@ -5,7 +5,7 @@ provider "aws" {
       ManagedBy   = "Terraform"
       Project     = var.project_name
       Environment = var.environment
-      Center = "Training"
+      Center      = "Training"
     }
 
   }

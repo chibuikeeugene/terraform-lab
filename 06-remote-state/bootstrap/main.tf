@@ -1,5 +1,4 @@
 data "aws_caller_identity" "current_user" {
-
 }
 
 resource "aws_s3_bucket" "terraform_state" {
