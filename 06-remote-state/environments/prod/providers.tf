@@ -11,14 +11,14 @@ provider "aws" {
 }
 
 provider "aws" {
-  alias = "secondary"
+  alias  = "secondary"
   region = var.aws_secondary_region
   default_tags {
     tags = {
       ManagedBy   = "Terraform"
       Project     = var.project_name
       Environment = var.environment
-      RegionRole = "secondary"
+      RegionRole  = "secondary"
     }
 
   }
