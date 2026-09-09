@@ -5,4 +5,5 @@
 module "storage" {
   source = "./modules/storage"
   bucket_name = var.import_bucket_name
+  cidr_block = var.cidr_block
 }
