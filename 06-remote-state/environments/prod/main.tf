@@ -1,5 +1,5 @@
 data "aws_caller_identity" "current" {
-
+  provider = aws.secondary # just assigning the secondary provider configuration alias here. could be removed!
 }
 
 module "primary_network" {
